@@ -11,3 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.border{
+  border: 1px solid #000;
+}
+.top-pane{
+  height: 50vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content:space-around;
+}
+.bottom-pane{
+  height: 50vh;
+  width: 100%;
+}
+
+.iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.editor{
+  width: 33%;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.CodeMirror {
+  text-align: left!important;
+  height: 100%  !important;
+}
+
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+
+}
+
+.react-codemirror2{
+  height:100%;
+}
+
+.minimise-button{
+  position: absolute;
+  right:0%;
+}
