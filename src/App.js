@@ -13,19 +13,14 @@ function App() {
   return (
     <div className="App">
       <div className="top-pane border">
-        <Editor options= {html}/*HTML code editor*/ />
-        <Editor options = {css}/*CSS code editor*/ />
-        <Editor options = {javascript}/*JS code editor*/ />
+        <Editor options= {html}/>
+        <Editor options = {css}/>
+        <Editor options = {javascript} />
       </div>
       <div className="bottom-pane border">
         <iframe
           title="myCode"
           className="iframe"
-          /*Title option*/
-          /*sandbox option*/
-          /*frameBorder option*/
-          /*width-height option*/
-          /*Title option*/
         ></iframe>
       </div>
     </div>
