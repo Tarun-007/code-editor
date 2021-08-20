@@ -13,7 +13,7 @@ code {
 }
 
 .border{
-  border: 1px solid #000;
+  border: 3px solid #000;
 }
 .top-pane{
   height: 50vh;
@@ -33,7 +33,7 @@ code {
 }
 
 .editor{
-  width: 33%;
+  width: 95%;
   height: 100%;
   position: relative;
   display: inline-block;
@@ -57,4 +57,10 @@ code {
 .minimise-button{
   position: absolute;
   right:0%;
+  cursor: pointer;
 }
+
+.minimised{
+  width:5%;
+}
+

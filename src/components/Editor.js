@@ -12,21 +12,32 @@ class Editor extends React.Component {
   constructor() {
     super();
     console.log("setting state");
-    this.state = { value: "hello" };
+    this.state = {minimise:false };
   }
+
+  minimiseHandler = (event)=> {
+    this.setState(prevState => ({
+      minimise: !prevState.minimise
+    }));
+  }
+
   render() {
     console.log(this.state);
+    const minimise = this.state.minimise;
     return (
-      <div className="border editor">
+      <div className={`border editor ${minimise && 'minimised'}`}>
         <div>
           {this.props.options.mode}
-          <span className="minimise-button">X</span>
+          <span className="minimise-button" onClick={this.minimiseHandler}>
+            X
+          </span>
         </div>
         <CodeMirror
-          value={this.state.value}
+          value={this.props.content}
           options={this.props.options}
           onBeforeChange={(editor, data, value) => {
-            this.setState({ value });
+            console.log("here inside onBeforeChange");
+            this.props.updateHandler(this.props.options, value);
           }}
           onChange={(editor, data, value) => {}}
         />
