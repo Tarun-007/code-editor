@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React from 'react';
 import Editor from "./components/Editor";
@@ -8,11 +7,11 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      html: '',
-      style: '',
-      script: '',
-      doc:'srcDoc'
-    }
+      html: "<h1>Hey! start coding..</h1>",
+      style: "",
+      script: "",
+      doc: "<h1>Hey! start coding..</h1>",
+    };
   }
 
   updateDoc = () => {
@@ -46,6 +45,18 @@ class App extends React.Component {
         return;
     }
     this.updateDoc();
+
+  }
+
+  reset = ()=> {
+    var state = {
+      html: "",
+      style: "",
+      script: "",
+      doc: "<h1>Hey! start coding..</h1>",
+    };
+    console.log("setting state",state,this);
+    this.setState(state);
   }
 
   render() {
@@ -54,12 +65,21 @@ class App extends React.Component {
       theme: 'material',
     };
 
+    console.log("state while rendering app.js",this.state);
+
 
     let javascriptOp = { ...options, mode: 'javascript' }
     let htmlOp = { ...options, mode: 'xml' };
     let cssOp = { ...options, mode: "text/css" };
     return (
       <div className="App">
+        <nav>
+          <h1>Code Editor</h1>
+          <button type="button" className="reset" onClick={this.reset}>
+            Reset
+          </button>
+        </nav>
+
         <div className="top-pane border">
           <Editor
             options={htmlOp}

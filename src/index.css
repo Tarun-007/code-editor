@@ -23,7 +23,7 @@ code {
   justify-content:space-around;
 }
 .bottom-pane{
-  height: 50vh;
+  height: 40vh;
   width: 100%;
 }
 
@@ -33,7 +33,7 @@ code {
 }
 
 .editor{
-  width: 95%;
+  width: 90%;
   height: 100%;
   position: relative;
   display: inline-block;
@@ -56,11 +56,32 @@ code {
 
 .minimise-button{
   position: absolute;
-  right:0%;
+  right:1%;
   cursor: pointer;
 }
 
 .minimised{
   width:5%;
 }
+
+nav{
+  border:1px solid black;
+  height: 4rem;
+  position: sticky;
+  
+  top:0;
+  box-shadow: #000;
+  background-color: #374151;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset{
+  position: relative;
+  left : 40%;
+  cursor: pointer;
+}
+
+
 
