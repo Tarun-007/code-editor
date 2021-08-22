@@ -48,6 +48,13 @@ class App extends React.Component {
 
   }
 
+  timeout
+
+  debounce = (text) => {
+    clearTimeout(this.timeout);
+    setTimeout(()=>{return text },2000)
+  }
+
   reset = ()=> {
     var state = {
       html: "",
@@ -101,7 +108,7 @@ class App extends React.Component {
           <iframe
             title="myCode"
             className="iframe"
-            srcDoc={this.state.doc}
+            srcDoc={()=>{setTimeout()}}
           ></iframe>
         </div>
       </div>
