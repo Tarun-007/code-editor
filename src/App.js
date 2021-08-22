@@ -108,7 +108,7 @@ class App extends React.Component {
           <iframe
             title="myCode"
             className="iframe"
-            srcDoc={()=>{setTimeout()}}
+            srcDoc={this.state.doc}
           ></iframe>
         </div>
       </div>
