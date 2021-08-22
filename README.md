@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Features
+1. Write css, html, and javascript in separate editors
+2. minimise any of the three code editors
+3. debounced output to avoid unnecessary renders
+4. reset the code 
+
+## upcoming features to be implemented in order of priority
+1. save the code 
+2. sharable link to share the code and output
+3. login to save multiple code projects
+4. view console
+
 ## Available Scripts
 
 In the project directory, you can run:
